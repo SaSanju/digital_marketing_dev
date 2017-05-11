@@ -9,11 +9,10 @@ angular.module('todoController', [])
 		// GET =====================================================================
 		// when landing on the page, get all todos and show them
 		// use the service to get all the todos
-		Todos.get(apiName)
-			.success(function(data) {
-				$scope.todos = data;
-				$scope.loading = false;
-			});
+
+		$scope.joinSubmit = function (params) {
+			console.log($scope.phnNo);
+		}
 
 		// CREATE ==================================================================
 		// when submitting the add form, send the text to the node API

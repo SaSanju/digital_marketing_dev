@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="digitalMarketngApp">
 
 <head>
 
@@ -8,15 +8,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Digital Marketing</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!--Angular Js-->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-resource/angular-resource.min.js"></script>
+
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -26,24 +32,25 @@
 
     <!-- Temporary navbar container fix -->
     <style>
-    .navbar-toggler {
-        z-index: 1;
-    }
-    
-    @media (max-width: 576px) {
-        nav > .container {
-            width: 100%;
+        .navbar-toggler {
+            z-index: 1;
         }
-    }
+        
+        @media (max-width: 576px) {
+            nav>.container {
+                width: 100%;
+            }
+        }
     </style>
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-controller="mainController">
 
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
@@ -57,7 +64,7 @@
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio">Join Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -72,7 +79,8 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Welcome to Digital Marketing</h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your
+                    template and start going, no strings attached!</p>
                 <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
             </div>
         </div>
@@ -84,7 +92,10 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <h2 class="section-heading text-white">We've got what you need!</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the
+                        templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings
+                        attached!
+                    </p>
                     <a class="btn btn-default btn-xl sr-button" href="#services">Get Started!</a>
                 </div>
             </div>
@@ -143,10 +154,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Category I
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Sales Force
                                 </div>
                             </div>
                         </div>
@@ -158,10 +169,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Category II
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Analytical Analysis
                                 </div>
                             </div>
                         </div>
@@ -173,10 +184,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Category III
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Digital Marketing
                                 </div>
                             </div>
                         </div>
@@ -188,10 +199,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Category IV
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Compitative Analysis
                                 </div>
                             </div>
                         </div>
@@ -203,10 +214,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Category V
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Industry Analysis
                                 </div>
                             </div>
                         </div>
@@ -218,10 +229,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Category VI
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Pricing of Product
                                 </div>
                             </div>
                         </div>
@@ -233,8 +244,42 @@
 
     <div class="call-to-action bg-dark">
         <div class="container text-center">
-            <h2>Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-default btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+            <h2>Let's Join With Us!</h2>
+                <form class="text-center">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Company Name</label>
+                                <input type="text" ng-model="cmpnyName" class="form-control" id="example-text-input" placeholder="Enter Company Name">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Website URL</label>
+                                <input type="url" ng-model="websiteUrl" class="form-control" id="example-url-input" placeholder="Enter Website URL">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Contact Email</label>
+                                <input type="email" ng-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Contact Name</label>
+                                <input type="text" ng-model="cntcName" class="form-control" id="example-text-input" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Contact Phone</label>
+                                <input class="form-control" ng-model="phnNo" type="tel" id="example-tel-input" placeholder="Enter Phone No">
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <a class="btn btn-default btn-xl sr-button" ng-click="joinSubmit()" href="#contact">Join Now!</a>
         </div>
     </div>
 
@@ -244,7 +289,8 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will
+                        get back to you as soon as possible!</p>
                 </div>
                 <div class="col-lg-4 offset-lg-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
@@ -270,6 +316,11 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/core.js"></script> <!-- load our main application -->
+    <script src="js/services/todos.js"></script> <!-- load our todo service -->
+
+
 
 </body>
 
