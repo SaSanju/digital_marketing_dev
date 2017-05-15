@@ -26,14 +26,17 @@ module.exports = function (app) {
 
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
-            text: req.body.text,
-            done: false
+            companyname: req.body.companyName,
+            personname: req.body.cntcName,
+            contactnumber: req.body.phnNo,
+            email: req.body.email,
+            url: req.body.websiteUrl
         }, function (err, todo) {
             if (err)
                 res.send(err);
 
             // get and return all the todos after you create another
-            getTodos(res);
+            res.send(todo);
         });
 
     });

@@ -2,7 +2,6 @@ angular.module('todoController', [])
 
 	// inject the Todo service factory into our controller
 	.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
-		$scope.formData = {};
 		$scope.loading = true;
 		var apiName = '/api/todos'
 
@@ -11,7 +10,24 @@ angular.module('todoController', [])
 		// use the service to get all the todos
 
 		$scope.joinSubmit = function (params) {
-			console.log($scope.phnNo);
+			var formData = {
+				companyName: $scope.cmpnyName,
+				websiteUrl: $scope.websiteUrl,
+				email: $scope.email,
+				cntcName: $scope.cntcName,
+				phnNo: $scope.phnNo
+
+			};
+			Todos.create(formData, apiName)
+
+					// if successful creation, call our get function to get all the new todos
+					.then(function(data) {
+						$scope.cmpnyName = '';
+						$scope.websiteUrl = '';
+						$scope.email = '';
+						$scope.cntcName = '';
+						$scope.phnNo = ''; // clear the form so our user is ready to enter another
+					});
 		}
 
 		// CREATE ==================================================================
